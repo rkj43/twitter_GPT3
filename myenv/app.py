@@ -5,10 +5,11 @@ from textblob import TextBlob
 app = Flask(__name__)
 
 # Twitter API credentials
-consumer_key = "vrXfWLAq7N68NLRpGlIbyxI88"
-consumer_secret = "E6vdhoM8YdcaVlB7Q0pF8rDcpaSazJqun1Lhy16HiE1nkg4PbH"
-access_token = "70369388-9Z3sdeSFEnxCSiXkrjpgfcPSF00nYYNTZlCm1nuEj"
-access_token_secret = "gSINiTLf05Atq5HxtLItWaOaWRFkSJs0f0cd6C3VOCYbh"
+consumer_key = "Get_Your_Own_Key"
+consumer_secret = "Get_Your_Own_Key"
+access_token = "70369388-Get_Your_Own_Key"
+access_token_secret = "Get_Your_Own_Key"
+# visit https://developer.twitter.com/en to get your credentials.
 
 # Authenticate to Twitter
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
