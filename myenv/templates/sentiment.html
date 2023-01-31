@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Sentiment Analysis Result</title>
+    <style>
+      /* Add some styles to make the page look good */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 40px;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      .sentiment-positive {
+        color: green;
+      }
+      .sentiment-negative {
+        color: red;
+      }
+      .sentiment-neutral {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sentiment Analysis Result</h1>
+    <p>Overall sentiment for tweets with hashtag "{{ hashtag }}":</p>
+    <p class="sentiment-{{ sentiment|lower }}">{{ sentiment }}</p>
+  </body>
+</html>

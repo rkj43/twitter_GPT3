@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Sentiment Analysis</title>
+    <style>
+      /* Add some styles to make the page look good */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      form {
+        display: inline-block;
+        margin-bottom: 40px;
+      }
+      input[type="text"] {
+        font-size: 18px;
+        padding: 10px;
+        margin-right: 20px;
+      }
+      input[type="submit"] {
+        font-size: 18px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .result {
+        font-size: 24px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sentiment Analysis</h1>
+    <form action="/sentiment" method="post">
+      <input type="text" name="hashtag" placeholder="Enter hashtag">
+      <input type="submit" value="Analyze">
+    </form>
+  </body>
+</html>
