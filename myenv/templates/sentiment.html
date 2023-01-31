@@ -1,35 +1,49 @@
+<!-- sentiment.html -->
+
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Sentiment Analysis Result</title>
     <style>
-      /* Add some styles to make the page look good */
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 40px;
+      table {
+        width: 100%;
+        overflow: auto;
+        border-collapse: collapse;
       }
-      h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
+      th, td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid black;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      h1, h2 {
+        text-align: center;
       }
       p {
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
-      .sentiment-positive {
-        color: green;
-      }
-      .sentiment-negative {
-        color: red;
-      }
-      .sentiment-neutral {
-        color: gray;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <h1>Sentiment Analysis Result</h1>
-    <p>Overall sentiment for tweets with hashtag "{{ hashtag }}":</p>
-    <p class="sentiment-{{ sentiment|lower }}">{{ sentiment }}</p>
+    <h1>Sentiment Analysis Result for {{ hashtag }}</h1>
+    <p>Overall sentiment: {{ sentiment }}</p>
+    <h2>Individual Tweet Sentiments:</h2>
+    <table>
+      <tr>
+        <th>Tweet</th>
+        <th>Sentiment</th>
+      </tr>
+      {% for tweet, sentiment in tweet_sentiments %}
+        <tr>
+          <td>{{ tweet }}</td>
+          <td>{{ sentiment }}</td>
+        </tr>
+      {% endfor %}
+    </table>
   </body>
 </html>
